@@ -42,4 +42,5 @@ end
 if balance == 0
 	puts "You ran out of money."
 end
+
 puts "Your balance: #{balance}."
