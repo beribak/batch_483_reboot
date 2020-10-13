@@ -9,7 +9,8 @@ puts "Welcome to Christmas list"
 puts "You can list|add|delete|mark|etsy"
 
 user_choice = ""
-list = ["danko", "andrew", "emily", "danko"]
+list = ["iPhone", "shoes", "PS4", "Macbook"]
+
 user_choice = gets.chomp
 # list.delete_at()
 
@@ -42,12 +43,13 @@ while user_choice != 'quit'
 		list_items(list)
 		item_index = gets.chomp.to_i
 		
-		if list[item_index][0...2] != "[x]"
-			list[item_index] = "[x]#{list[item_index]}"
+		if list[item_index][0...2] != "[x]"                         
+		   list[item_index] = "[x]#{list[item_index]}"
 		else
-			puts "You already purchesed this product."
+			puts "You already purchesed this product."                      
 		end
 		list_items(list)
+
 	when "etsy"
 		etsy_names = []
 		# 1. Call website using Nokigiri
