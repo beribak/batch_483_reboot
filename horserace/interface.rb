@@ -1,10 +1,10 @@
 #1. Model horses and define starting balance
 horses = ["Gotham", "Dark Knight", "Thunder", "Danko"]
-#            0           1             2
+#            0           1             2          3
 balance = 10
-answer = "Y"
-
-while balance > 9 && answer == "Y"
+answer = "Y" # we use this variable to store the user answer when prompted to say if they want to bet again 
+			 # and use it in the loop			
+while balance > 9 && answer == "Y"    #	balance greater then 9 and answer is Y	
 	puts "Wecome the the horse race."
 	puts "=========================="
 	puts "Your balance: #{balance}."
@@ -16,12 +16,11 @@ while balance > 9 && answer == "Y"
 
 	#3.Capture user response
 	user_choice = gets.chomp.to_i - 1
-	# horses[2]
+
 	#4. Run race and get winning horse
-	# winner = horses[rand(0...horses.length - 1)]
-	winner = horses.sample()   
+	winner = horses.sample()   # same result as winner = horses[rand(0...horses.length - 1)]
 	#5.Show resluts
-	# puts winner
+	puts "The winner is #{winner}"
 
 	#6. Change starting balance based on the winner
 	if horses[user_choice] == winner
@@ -29,10 +28,9 @@ while balance > 9 && answer == "Y"
 		puts "Congrats you won."
 	else
 		balance -= 10
-		puts "You suck."
+		puts "Sorry. You lost."
 	end
 	 
-
 	#7. Ask user if he wants to bet again or exit race
 	puts "Do you want to bet again or exit the race. [Y/N]"
 	answer = gets.chomp
