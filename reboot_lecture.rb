@@ -124,7 +124,7 @@ elsif var == false
 else
 	puts "helooo"
 end
-                     # if/elsif can be converted onto when
+                     # if/elsif can be converted into when
 case var
 when true
 	puts "danko"
@@ -138,15 +138,15 @@ end
 
 
 total_items = 0
- while total_items < 10
- 	total_items += 1
- 	puts "Thanks for purchasing this item."    # puts this 10 times
-  end
+while total_items < 10
+	total_items += 1
+	puts "Thanks for purchasing this item."    # puts this 10 times
+end
 total_items = 0
 var = true
 
 until var == false
-	puts "danko"                   # it doesent execute
+	puts "danko"           # it doesent execute
 end                          
 
 # begin 

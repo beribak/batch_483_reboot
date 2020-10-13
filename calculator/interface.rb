@@ -18,7 +18,7 @@ while user_choice == "Y"
 	operator = gets.chomp
 
 	#6. Execute operation and return result (ex. add numbers together and return them)
-	result = addTwoNumbers(number1, number2, operator)
+	result = calcFunc(number1, number2, operator)
 	
 	if result == nil
 		puts "OMG What did you do you broke the computer. Pls use a valid operator."
@@ -32,5 +32,6 @@ while user_choice == "Y"
 	#7. Ask user if he wants to stop.
 	puts "Do you want to do another calculation or exit the calculator. Answer with [Y/N]"
 	user_choice = gets.chomp
-	#8. Repeat the steps from before until user says stop(N)
+
+	#8. Repeat the steps from before until user says stop(N). This is the while loop that envelopes the code
 end
